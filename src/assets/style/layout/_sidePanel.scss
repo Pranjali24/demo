@@ -1,0 +1,222 @@
+.sidePanel{
+    height: 100vh;
+    position: relative;
+    .logoPanel{
+        background-color: $blueBg;
+        // border-top-left-radius: 20px;
+        // border-bottom-left-radius: 20px;
+        padding: 0px;
+        z-index: 2;
+        height: 100%;
+        .logo{
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 40px;
+            span{
+                display: block;
+                font-size: 12px;
+                color: $white;
+            }
+        }
+        ul{
+            @include flex();
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            li{
+                margin-bottom: 40px;
+            a{
+                &.activeMenu{
+                    background-color: $active;
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+.panelSecond{
+        background-color: $iceWhite;
+        // border-top-left-radius: 20px;
+        // border-bottom-left-radius: 20px;
+        // padding: 20px;
+        // z-index: 2;
+        // padding-top: 30px;
+        height: 100vh;
+        .headingTop{
+            h2{
+                font-size: 25px;
+            }
+            .dropdown-toggle{
+                cursor: pointer;
+            }
+            .dropdown-menu{
+                // transform: translate3d(107px, 50px, 0px) !important;
+                transform: translate3d(212px, 50px, 0px) !important;
+                left: 40px !important;
+                box-shadow: 0px 0px 15px rgb(109 102 102 / 50%);
+                border: unset;
+                z-index: 99999999;
+                .dropdown-item {
+                    padding: 10px 25px;
+                    color: #8b8d8e;
+                }
+            }
+            .dropdown-toggle::after{
+                display: none;
+            }
+        }
+        .userRowHeadFix{
+          min-height: 100px;
+            max-height: 460px;
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 10px;
+
+            @media(min-width:1440px){
+
+                max-height: 550px;
+            }
+        }
+        .userRow{
+            background-color: $white;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0px 3px 6px rgb(0 0 0 / 5%);
+            transition-duration: 0.5s;
+            cursor: pointer;
+            margin-bottom: 15px;
+            &:hover{
+                box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+            }
+            .userListing{
+                @include flex();
+                justify-content: space-around;
+                align-items: center;
+            }
+            &.activeUser{
+                background-color: $blueBg;
+                .userListing{
+                    @include flex();
+                    justify-content: end;
+                    align-items: center;
+                    .contentBox{
+                        padding-left: 14px;
+                    }
+                }
+                h5{
+                    color: $white;
+                }
+                p{
+                    color: $white;
+                }
+                .setNumber{
+                    color: $white;
+                }
+            }
+            .imgBox{
+                // height: 70px;
+                // width: 70px;
+                img{
+                    padding: 5px;
+                    border-radius: 50%;
+                    height: 60px;
+                    width: 60px;
+                    object-fit: cover;
+                }
+            }
+            .contentBox{
+                padding: 9px;
+                padding-right: 25px;
+                padding-left: 7px;
+                width: 240px;
+                h5{
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 25px;
+                    margin-bottom: 0px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 19px;
+                    margin-bottom: 0px;
+                }
+            }
+            .msgNotification{
+                padding-right: 10px;
+                .setNumber{
+                    height: 30px;
+                    width: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    border: 1px solid $blueBg;
+                }
+            }
+        }
+    }
+
+    // &::after{
+    //     position: absolute;
+    //     content: '';
+    //     background-color: $blueBg;
+    //     height: 100%;
+    //     width: 40%;
+    //     left: 30px;
+    //     top: 0;
+    //     z-index: 1;
+    // }
+    .searchRow{
+        margin-top: 20px;
+        .input-group{
+            border: 1px solid $iceWhite;
+            background-color: $white;
+            border-radius: 30px;
+            .input-group-prepend{
+                background-color: transparent;
+                span{
+                    background-color: #fff;
+                    border: unset;
+                    height: 50px;
+                    border-bottom-left-radius: 30px;
+                    border-top-left-radius: 30px;
+                    i{
+                        opacity: 40%;
+                    }
+                }
+            }
+            .form-control{
+                height: 50px;
+                border: unset;
+                border-bottom-right-radius: 30px;
+                border-top-right-radius: 30px;
+                outline: unset;
+                box-shadow: unset;
+            }
+        }
+    }
+
+    .userRowHeadFix::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      .userRowHeadFix::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      .userRowHeadFix::-webkit-scrollbar-thumb {
+        background: rgb(199, 196, 196);
+      }
+
+      /* Handle on hover */
+      .userRowHeadFix::-webkit-scrollbar-thumb:hover {
+        background: rgb(148, 145, 145);
+      }
+}

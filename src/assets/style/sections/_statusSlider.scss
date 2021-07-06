@@ -1,0 +1,64 @@
+.topStatusBar{
+    padding: 20px 10px 10px 10px;
+}
+.SliderSection{
+    h3{
+        margin-bottom: 20px;
+    }
+    .swiper-slide{
+        height: 80px !important;
+        width: 80px !important;
+        border: 3px solid $active;
+        border-radius: 50%;
+        @include flex();
+        justify-content: center;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            text-align: center;
+            height: 65px;
+            width: 65px;
+            object-fit: revert;
+            transition-duration: 0.5s;
+            &:hover{
+                height: 70px;
+                width: 70px;
+            }
+        }
+    }
+    .AddStatus{
+        position: relative;
+        box-shadow: 0px 3px 6px rgba(133, 133,133,16%);
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0px;
+            background-color: rgba(0, 118, 255,0.5);
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        &::before{
+            font-family: FontAwesome;
+            content: "\f067";
+            position: absolute;
+            top: 19px;
+            left: 24px;
+            font-size: 21px;
+            color: $white;
+            z-index: 1;
+        }
+        .swiper-slide{
+            border: 3px solid #E3E3E3 !important;
+        }
+        .customFileUpload{
+            position: absolute;
+            z-index: 999;
+            width: 60px;
+            top: 21px;
+            left: 6px;
+            opacity: 0;
+        }
+    }
+}

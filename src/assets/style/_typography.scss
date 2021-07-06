@@ -1,0 +1,71 @@
+body{
+    font-family: $font-family;
+    @include font(16px);
+    overflow-x: hidden;
+    @include font-weight (400);
+ }
+
+ a{
+   &:hover{
+    outline:none;
+    text-decoration:none;
+   }
+   &:focus{
+    outline:none;
+    text-decoration:none;
+   }
+ }
+
+
+.bg-blue{
+  background-color: $blueBg;
+}
+
+ p{
+   @include font(16px);
+   @include line (24px);
+ }
+ h1{
+  @include heading($heading,40px,50px);
+   @include margin-bottom (0px);
+}
+h2{
+   @include heading($heading,32px,42px);
+     @include margin-bottom (0px);
+}
+h3{
+  @include heading($heading,30px,36px);
+   @include margin-bottom (0px);
+}
+h4{
+  @include heading($heading,24px,30px);
+   @include margin-bottom (0px);
+}
+h5{
+  @include heading($heading,18px,24px);
+   @include margin-bottom (0px);
+}
+h6{
+  @include heading($heading,16px,22px);
+   @include margin-bottom (0px);
+  }
+  
+ img{
+   max-width:100%;
+  }
+  
+ ul,ol{
+   list-style: none;
+   @include margin (0px);
+   @include padding (0px);
+ }
+ 
+.commonMargin{
+  // padding: 30px;
+  margin-top: 30px;
+}
+
+.headSet{
+  padding:0px 30px;
+
+}

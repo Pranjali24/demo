@@ -1,0 +1,22 @@
+<div class="SliderSection">
+    <h3>Status</h3>
+    <swiper
+    [slidesPerView]="6"
+    [spaceBetween]="20"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+    [autoplay]=false
+    [zoom]= true
+    >
+    <ng-template swiperSlide>
+        <div class="AddStatus">
+            <img src="https://picsum.photos/200.jpg" /> 
+            <input type="file" class="customFileUpload">
+        </div>
+    </ng-template>
+
+    <ng-template swiperSlide *ngFor="let slide of slideData">
+        <img src="https://picsum.photos/200/{{slide.id}}.jpg" />
+    </ng-template>
+</swiper>
+</div>

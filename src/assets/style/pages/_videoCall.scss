@@ -1,0 +1,84 @@
+.videoCall{
+    .bgBlue{
+        height: 100vh;
+        width: 100%;
+        background-color: #0066dc;
+        background-image: url('../../images/videoCallSam.png');
+        background-repeat: no-repeat;
+        // border-radius: 12px;
+        // padding: 30px 30px;
+        padding: 61px 0px 0px 70px;
+        background-size: 100% 100%; 
+        .otherPersion{
+            img{
+                border-radius: 15px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+                border: solid 2px #ffffff;
+                // height: 100px;
+            }
+        }
+        .userName{
+            h4{
+                font-size: 25px;
+                color: #fff;
+                margin-bottom: 0px;
+            }
+            p{
+                color: #fff;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .mainPersion{
+        padding-right: 20px;
+            img{
+                height: 70px;
+                width: 70px;
+                border-radius: 7px;
+                border: solid 2px #ffffff;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+            }
+        
+    }
+    .buttonsRow{
+        margin-top: 20%;
+        ul{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            margin-bottom: 0px;
+            li{
+                &.left{
+                    margin-left: 25px;
+                }
+                button{
+                    border-radius: 5px;
+                    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+                    background-color: #ffffff;
+                    border: none;
+                    padding: 10px 15px;
+                }
+            }
+
+        }
+    }
+
+    .soundBar{
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: rotateZ(-90deg);
+        width: 180px;
+        display: flex;
+        border-radius: 28px;
+        justify-content: center;
+        padding: 7px;
+        position: fixed;
+        bottom:30%;
+        left: 10%;
+        i{
+            color: #fff;
+            margin-top: 10px;
+            transform: rotate(90deg);
+        }
+    }
+    
+}

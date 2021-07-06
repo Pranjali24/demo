@@ -1,0 +1,138 @@
+<div class="chatingBox">
+    <div class="chatingHeader">
+        <div class="userStatus">
+            <img src="https://picsum.photos/200.jpg" alt="">
+            <div class="userinfo">
+                <h6>Janet Fowler</h6>
+                <p>Online</p>
+            </div>
+        </div>
+        <div class="userCall">
+            <ul class="d-flex">
+                <li><a routerLink="/video"><i class="fa fa-video-camera" aria-hidden="true"></i></a></li>
+                <li><a routerLink="/audio"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="chatingbody">
+        <!--  -->
+        <div class="bubbleWrapper">
+            <div class="inlineContainer">
+                <div class="otherBubble other">
+                    Yes Jaydeep!
+                </div>
+            </div><span class="other">08:41</span>
+
+        </div>
+
+        <div class="bubbleWrapper">
+            <div class="inlineContainer own">
+                <div class="ownBubble own">
+                 How Are You ? and where are you now a days ?
+                </div>
+            </div><span class="own">08:55 &nbsp; <i class="material-icons">done_all</i></span>
+        </div>
+
+        <div class="bubbleWrapper">
+            <div class="inlineContainer">
+                <div class="otherBubble other">
+                    I'm good Thanks, i'm in Parice
+                </div>
+            </div>
+        </div><span class="other">10:13</span>
+        <div class="bubbleWrapper">
+            <div class="inlineContainer own">
+                <div class="ownBubble own">
+                    <div class="voiceMsg">
+                        <span>
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </span>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div><span class="own">11:07</span>
+        </div>
+
+        <div class="bubbleWrapper">
+            <div class="inlineContainer">
+                <div class="otherBubble other">
+                    How about throwing stars?
+                </div>
+            </div><span class="other">11:11</span>
+        </div>
+
+        <div class="bubbleWrapper">
+            <div class="inlineContainer own">
+                <div class="ownBubble own">
+                    <div class="typingNotification">
+                        <div class="lds-ellipsis">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div><span class="own">11:07</span>
+        </div>
+        <!--  -->
+    </div>
+    <div class="chatingfooter">
+        <div class="msgWriteBox">
+            <div class="row align-items-center">
+                <div class="col-md-11">
+                    <div class="searchRow">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <img src="assets/images/voiceMsg.svg" alt="">
+                                </span>
+                            </div>
+                            <input type="text" [(ngModel)]="message" (keyup.enter)='submitMessage($event)' class="form-control" placeholder="Type a message" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 d-flex p-0 emojiPlus">
+                    <div>
+                        <ul class="menu bottomRight">
+                            <li class="share top">
+                                <img class="dotsImg" src="assets/images/plusIcon.svg" alt="">
+                              <ul class="submenu">
+                                <li><a href="#" class="facebook">
+                                    <img src="assets/images/CapturePhoto.svg" alt="">
+                                </a></li>
+                                <li><a href="#" class="twitter">
+                                    <img src="assets/images/gallary.svg" alt="">
+                                </a></li>
+                                <li><a href="#" class="twitter">
+                                    <img src="assets/images/contactSend.svg" alt="">
+                                </a></li>
+                                <li><a href="#" class="googlePlus">
+                                    <img src="assets/images/documentSend.svg" alt="">
+                                </a></li>
+                                <li><a href="#" class="instagram">
+                                    <img src="assets/images/videoCall.svg" alt="">
+                                </a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                    </div>
+                    <div>
+
+                        &nbsp; <img (click)='emojiVisiable = !emojiVisiable' class="dotsImg" src="assets/images/smileIcons.svg" alt="">
+                        <emoji-mart (emojiClick)="emojiClicked($event)"  *ngIf='emojiVisiable' style="position: absolute;bottom: 50px;right: 0px;" [darkMode]='false' title="Pick your emoji…" emoji="point_up"></emoji-mart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
